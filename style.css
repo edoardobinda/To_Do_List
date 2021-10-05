@@ -1,0 +1,37 @@
+.box{
+    border: solid 1px black;    
+    width: 85%;
+    margin: 0 auto;
+}
+.title{
+    text-align: center;
+}
+.formdiv{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.textfield{
+    width: 500px;
+}
+
+.items{
+    margin: 40px;
+}
+.submitbutton{
+    width: 45px;
+    height: 25px;
+}
+#menu{
+    margin-left: 100px;
+    margin-top: 60px;
+}
+.lielements{
+    margin: 50px;
+    margin-left: 0px;
+}
+
+.button1Pressed{
+    color: rgb(146, 146, 146);
+    text-decoration: line-through;
+}
