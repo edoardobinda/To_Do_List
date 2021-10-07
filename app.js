@@ -1,74 +1,108 @@
 var count = 0;
 
 function functionlist(){
-
-    var a = count ++;
-    var item = document.getElementById("item");
-    var newItem = document.createTextNode(item.value);
-    var newElement = document.createElement("li");
-
-// Each newElements (li) gets an ID made of the "count" number
     
-    newElement.setAttribute("id", count);
+    count ++;
+    
+    var textField = document.getElementById("item");
+    
+    var textNode = document.createTextNode(textField.value);
+    // textNode è il testo del nodo, il quale ha come valore ciò che inseriamo nel campo input
+    
+    var listElements = document.createElement("li");
+
+    var menu = document.getElementById("menu");// id=menu is the UL where our items will appear
+
+
+// Each listElementss (li) gets an ID made of the "count" number
+    
+    listElements.setAttribute("id", count);
+
 
 // Resetting the placeholder after each submission
     
     document.getElementById("item").value = '';
 
+
 //Creating BUTTONS
 
-    var button1 = document.createElement("button");
+    var DoneButton = document.createElement("button");
 
-    var button2 = document.createElement("button");
+    var EditButton = document.createElement("button");
 
-    var button3 = document.createElement("button");
+    var CancelButton = document.createElement("button");
 
-    button3.setAttribute("class", count);
-    button2.setAttribute("class", count);
+
+    CancelButton.setAttribute("class", count);
+    EditButton.setAttribute("class", count);
 
 //LI ELEMENTS
     
-    newElement.appendChild(newItem);
-    menu.appendChild(newElement);
-    newElement.className = "lielements";
+    listElements.appendChild(textNode);
+    menu.appendChild(listElements);
+    listElements.className = "lielements";
 
 //BUTTONS
     
 //Green Button  (Select/Deselect)
     
-    newElement.appendChild(button1);
-    button1.innerHTML = "Button1";
+    listElements.appendChild(DoneButton);
+    DoneButton.innerHTML = "DoneButton";
 
-        button1.onclick = function(){
-        newElement.classList.toggle("button1Pressed");
+        DoneButton.onclick = function(){
+        listElements.classList.toggle("DoneButtonPressed");
         }
 
 //Blue Button (Edit Button)
     
-    newElement.appendChild(button2);
-    button2.innerHTML = "Button2";
+    listElements.appendChild(EditButton);
+    EditButton.innerHTML = "EditButton";
 
-        button2.onclick = function(){
-            target2 = newItem.nodeValue;
-            item.value = target2;
+    var buttonSave = document.createElement("button");
+    buttonSave.innerHTML = "ButtonSave";
+    var target2 = textNode.nodeValue;
+    
+        
+        EditButton.onclick = function(){
+            console.log(target2);
+            textField.value = target2;
+                      
+            var inputcontainer = document.getElementById("formdiv");
+            buttonSave.setAttribute("class", count);
+            inputcontainer.appendChild(buttonSave);
+
+            
+            /*console.log(textNode);*/
 
             //If uncommmented, this line will allow the "Li" item to persist on the UL list
             //till the change has been made on the input line.
+            /*textField.onchange = function(){
+            var cancel = document.getElementById(CancelButton.className);
+            cancel.remove();
+            }*/
+            
+    }
+    
+    
 
-            /*item.onchange = function(){*/
-                
-            var cancel = document.getElementById(button3.className);
-        cancel.remove()
-        }
+//Save Button (it saves the changes we made to the list item) BUTTONSAVE 
+
+    buttonSave.onclick = function(){
+        let newValue = textField.value;
+        
+        textNode.nodeValue = newValue;
+        this.remove();
+        document.getElementById("item").value = '';
+
+    };
 
 //Red Button (Cancel Entry Button)
     
-    newElement.appendChild(button3);
-    button3.innerHTML = "Button3";
+    listElements.appendChild(CancelButton);
+    CancelButton.innerHTML = "CancelButton";
         
-        button3.onclick = function(){
-        var cancel = document.getElementById(button3.className);
+        CancelButton.onclick = function(){
+        var cancel = document.getElementById(CancelButton.className);
         cancel.remove();
         }
 }
-
