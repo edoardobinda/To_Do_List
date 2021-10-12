@@ -64,8 +64,10 @@ function functionlist(){
     
         
         EditButton.onclick = function(){
-            console.log(target2);
-            textField.value = target2;
+            
+            let thisLi = document.getElementById(this.classList);
+            let thisLitext = thisLi.firstChild.textContent;
+            textField.value = thisLitext;
                       
             var inputcontainer = document.getElementById("formdiv");
             buttonSave.setAttribute("class", count);
@@ -83,9 +85,7 @@ function functionlist(){
             
     }
     
-    
-
-//Save Button (it saves the changes we made to the list item) BUTTONSAVE 
+//Mark ZUCUMBERG MANGIA LAMMERDA CON BUTTONSAVE 
 
     buttonSave.onclick = function(){
         let newValue = textField.value;
@@ -105,4 +105,8 @@ function functionlist(){
         var cancel = document.getElementById(CancelButton.className);
         cancel.remove();
         }
+}
+
+function functionclear(){
+    document.getElementById("menu").innerHTML = "";
 }
