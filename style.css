@@ -13,10 +13,24 @@
 }
 .textfield{
     width: 500px;
+    border-color:rgba(127, 255, 212, 0.815);
+    box-shadow: none;
+    border-style: solid;
+    border-radius: 4px;
 }
-
-.items{
-    margin: 40px;
+.submitbutton{
+    border-color:rgba(127, 255, 212, 0.815);
+    box-shadow: none;
+    border-style: solid;
+    border-radius: 4px;
+    color: rgba(102, 202, 170, 0.876);
+}
+.clear{
+    border-color:rgba(127, 255, 212, 0.815);
+    box-shadow: none;
+    border-style: solid;
+    border-radius: 4px;
+    color: rgba(102, 202, 170, 0.876);
 }
 .submitbutton{
     width: 45px;
@@ -28,10 +42,21 @@
 }
 .lielements{
     margin: 50px;
-    margin-left: 0px;
+    margin-left: 0px;  
 }
-
+#menu{
+    border: solid red 1px;
+    margin-left: 70px;
+}
 .DoneButtonPressed{
     color: rgb(146, 146, 146);
     text-decoration: line-through;
+    
 }
+.check::before{
+    margin-left: 25px;
+    font-family: "Font Awesome 5 Free";
+    content: "\f058";
+    font-weight: 900;
+}
+
