@@ -47,7 +47,8 @@ function functionlist(){
 //Green Button  (Select/Deselect)
     
     listElements.appendChild(DoneButton);
-    DoneButton.innerHTML = "DoneButton";
+    DoneButton.innerHTML = "";
+    DoneButton.setAttribute("class", "check");
 
         DoneButton.onclick = function(){
         listElements.classList.toggle("DoneButtonPressed");
@@ -85,7 +86,7 @@ function functionlist(){
             
     }
     
-//Mark ZUCUMBERG MANGIA LAMMERDA CON BUTTONSAVE 
+// BUTTONSAVE 
 
     buttonSave.onclick = function(){
         let newValue = textField.value;
