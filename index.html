@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" async src="./app.js"></script> 
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="/style/css/fontawesome.css">
-    <link rel="stylesheet" type="text/css" href="/style/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+    
+    
     <title>Document</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
         <h1 class="title">To do List</h1>
 
         <div id="formdiv" class="formdiv">
-            <input class="textfield" id="item" type="text" value="" placeholder="Things to do...">
+            <input class="textfield" id="item" type="text" required pattern="\S(.*\S)?" value="" placeholder="Things to do...">
             <button class="submitbutton" id="add" value="Add" type="button" onclick="functionlist()">Add</button>
             <button class="clear" id="clear" type="button" onclick="functionclear()">Clear</button>
         </div>
@@ -26,7 +27,7 @@
             </ul>
             
         
-
+            
     </div>
 </body>
 </html>
