@@ -12,7 +12,8 @@
     margin-right: auto;
 }
 .textfield{
-    width: 500px;
+    max-width: 500px;
+    min-width: 300px;
     border-color:rgba(127, 255, 212, 0.815);
     box-shadow: none;
     border-style: solid;
@@ -42,21 +43,45 @@
 }
 .lielements{
     margin: 50px;
+    display: flex;
     margin-left: 0px;  
 }
 #menu{
-    border: solid red 1px;
+    /* border: solid  1px; */
     margin-left: 70px;
 }
 .DoneButtonPressed{
     color: rgb(146, 146, 146);
-    text-decoration: line-through;
-    
+    text-decoration: line-through;    
 }
-.check::before{
+.checksign::before{
     margin-left: 25px;
+    display: inline-block;
+    /* font-family: FontAwesome; */
     font-family: "Font Awesome 5 Free";
     content: "\f058";
     font-weight: 900;
+    color: green;
+}
+.editsign::before{
+    margin-left: 25px;
+    display: inline-block;
+    /* font-family: FontAwesome; */
+    font-family: "Font Awesome 5 Free";
+    content: "\f044";
+    font-weight: 900;
+    color: blue;
+}
+.cancelsign::before{
+    margin-left: 25px;
+    display: inline-block;
+    /* font-family: FontAwesome; */
+    font-family: "Font Awesome 5 Free";
+    content: "\f2ed";
+    font-weight: 900;
+    color: red;
+}
+.checksign.DoneButtonPressed::before{
+    color: lightgreen;
 }
 
